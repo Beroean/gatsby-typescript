@@ -2,11 +2,15 @@ import * as React from "react";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 import { graphql, PageProps, Link } from "gatsby";
-
+import { GatsbyImageProps } from "gatsby-plugin-image";
 export interface Frontmatter {
   date: string;
   title: string;
   slug: string;
+  hero_image: { childImageSharp: { gatsbyImageData: any } };
+  hero_image_alt: string;
+  hero_image_credit_text: string;
+  hero_image_credit_link: string;
 }
 interface Node {
   id: string;
