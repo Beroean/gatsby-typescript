@@ -28,6 +28,7 @@ const config: GatsbyConfig = {
     "gatsby-plugin-mdx",
     "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
+    "gatsby-theme-material-ui",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
