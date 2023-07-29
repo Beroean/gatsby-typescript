@@ -56,8 +56,6 @@ const AboutPage = () => {
           src="../images/mahmoud.jpg"
           layout="constrained"
           style={{ borderRadius: "50%" }}
-          width={500}
-          height={500}
         />
       </Box>
     </Layout>
