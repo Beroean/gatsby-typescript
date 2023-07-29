@@ -50,12 +50,14 @@ const AboutPage = () => {
           icon={<GitHubIcon color="action" fontSize="large" />}
         />
       </Stack>
-      <Box>
+      <Box justifyContent="center" display="flex">
         <StaticImage
           alt="Me"
           src="../images/mahmoud.jpg"
-          layout="fullWidth"
+          layout="constrained"
           style={{ borderRadius: "50%" }}
+          width={500}
+          height={500}
         />
       </Box>
     </Layout>
