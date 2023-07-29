@@ -12,16 +12,20 @@ const IndexPage = () => {
         experiment with new changes in the web development world outside of
         work. I will also be posting occassional blog posts on topics that
         interest me along with accompanying charts and data visualizations. The
-        midjourney AI generated the image below for me after I asked it to draw
-        a bazaar in my home city of Aleppo.
+        picture below{" "}
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href={"https://unsplash.com/@dabbas"}
+        >
+          (credit)
+        </a>{" "}
+        is the Aleppo Citadel throne room chandelier.
       </p>
       <Box justifyContent="center" display="flex">
         <StaticImage
-          alt="An AI generated picture of a bazaar during ramadan in my home city"
-          src="../images/bazaar.png"
-          layout="constrained"
-          width={500}
-          height={500}
+          alt="The chandelier in the throne room of Aleppo Citadel"
+          src="../images/chandelier.jpg"
         />
       </Box>
     </Layout>

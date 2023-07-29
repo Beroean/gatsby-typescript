@@ -54,7 +54,6 @@ const AboutPage = () => {
         <StaticImage
           alt="Me"
           src="../images/mahmoud.jpg"
-          layout="constrained"
           style={{ borderRadius: "50%" }}
         />
       </Box>
