@@ -2,7 +2,7 @@ import * as React from "react";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 import { graphql, PageProps, Link } from "gatsby";
-import { GatsbyImageProps } from "gatsby-plugin-image";
+import { active, link } from "./index.module.css";
 export interface Frontmatter {
   date: string;
   title: string;
@@ -27,12 +27,15 @@ interface DataProps {
 const BlogPage = ({ data }: PageProps<DataProps>) => {
   return (
     <Layout pageTitle="My Blog Posts">
-      <p>My cool posts will go in here</p>
       <ul>
         {data.allMdx.nodes.map((node) => (
           <article key={node.id}>
             <h2>
-              <Link to={`/blog/${node.frontmatter.slug}`}>
+              <Link
+                className={link}
+                activeClassName={active}
+                to={`/blog/${node.frontmatter.slug}`}
+              >
                 {node.frontmatter.title}
               </Link>
             </h2>

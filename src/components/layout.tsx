@@ -4,7 +4,8 @@ import {
   container,
   navLinks,
   navLinkItem,
-  siteTitle,
+  active,
+  link,
 } from "./layout.module.css";
 
 interface LayoutProps {
@@ -22,19 +23,25 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
       }
     }
   `);
+
   return (
     <div className={container}>
-      <header className={siteTitle}>{data.site.siteMetadata.title}</header>
       <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>
-            <Link to="/">Home</Link>
+            <Link className={link} activeClassName={active} to="/">
+              Home
+            </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/about">About</Link>
+            <Link className={link} activeClassName={active} to="/blog">
+              Blog
+            </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/blog">Blog</Link>
+            <Link className={link} activeClassName={active} to="/about">
+              About
+            </Link>
           </li>
         </ul>
       </nav>

@@ -1,7 +1,7 @@
 .container {
   margin: auto;
   max-width: 500px;
-  font-family: sans-serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .nav-links {
@@ -13,8 +13,10 @@
   padding-right: 2rem;
 }
 
-.site-title {
-  font-size: 3rem;
-  font-weight: 700;
-  margin: 3rem 0;
+.active {
+  color: blue !important;
+}
+
+.link {
+  color: white;
 }

@@ -2,14 +2,16 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Mahmoud Shaar Personal Website`,
+    title: `Mahmoud Shaar`,
     siteUrl: `https://www.mahmoudshaar.com`,
     description: `A personal website I build in my free time`,
     social: {
       linkedin: `mahmoud-shaar`,
+      github: `Beroean`,
     },
     author: {
       name: `Mahmoud Shaar`,
+      bio: "software engineer and data visualization enthusiast",
     },
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
