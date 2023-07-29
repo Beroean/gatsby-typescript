@@ -26,7 +26,7 @@ interface DataProps {
 
 const BlogPage = ({ data }: PageProps<DataProps>) => {
   return (
-    <Layout pageTitle="My Blog Posts">
+    <Layout pageTitle="Blog Posts">
       <ul>
         {data.allMdx.nodes.map((node) => (
           <article key={node.id}>
