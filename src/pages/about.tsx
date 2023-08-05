@@ -29,7 +29,7 @@ const AboutPage = () => {
   const social = metaData.site.siteMetadata?.social;
   return (
     <Layout pageTitle="About Me">
-      <p>
+      <p style={{ marginTop: "0px", marginBottom: "0px" }}>
         Hi there! My name is {author.name}. I'm a {author.bio}. I'm building
         this website in my free time.
       </p>

@@ -7,7 +7,7 @@ import { Box } from "@mui/material";
 const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
-      <p style={{ marginBottom: "6px" }}>
+      <p style={{ marginTop: "0px", marginBottom: "6px" }}>
         Welcome to my personal website. I am using this website as a way to
         experiment with new changes in the web development world outside of
         work. I will also be posting occassional blog posts on topics that
@@ -17,6 +17,7 @@ const IndexPage = () => {
           target="_blank"
           rel="noreferrer"
           href={"https://unsplash.com/@dabbas"}
+          style={{ color: "white" }}
         >
           (credit)
         </a>{" "}
@@ -26,6 +27,8 @@ const IndexPage = () => {
         <StaticImage
           alt="The chandelier in the throne room of Aleppo Citadel"
           src="../images/chandelier.jpg"
+          height={550}
+          width={550}
         />
       </Box>
     </Layout>

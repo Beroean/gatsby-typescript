@@ -3,6 +3,11 @@ import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 import { graphql, PageProps, Link } from "gatsby";
 import { active, link } from "./index.module.css";
+export interface Chart {
+  data: any;
+  type: string;
+  config: any;
+}
 export interface Frontmatter {
   date: string;
   title: string;
@@ -11,6 +16,7 @@ export interface Frontmatter {
   hero_image_alt: string;
   hero_image_credit_text: string;
   hero_image_credit_link: string;
+  chart: string;
 }
 interface Node {
   id: string;

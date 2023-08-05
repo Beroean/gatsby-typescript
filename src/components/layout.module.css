@@ -8,6 +8,7 @@
   display: flex;
   list-style: none;
   padding-left: 0;
+  justify-content: center;
 }
 .nav-link-item {
   padding-right: 2rem;
