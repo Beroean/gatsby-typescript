@@ -27,9 +27,33 @@ const config: GatsbyConfig = {
         icon: "src/images/syria.png",
       },
     },
-    "gatsby-plugin-mdx",
-    "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
     "gatsby-theme-material-ui",
     "gatsby-transformer-sharp",
     {

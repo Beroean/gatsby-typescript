@@ -12,11 +12,6 @@ export interface Frontmatter {
   date: string;
   title: string;
   slug: string;
-  hero_image: { childImageSharp: { gatsbyImageData: any } };
-  hero_image_alt: string;
-  hero_image_credit_text: string;
-  hero_image_credit_link: string;
-  chart: string;
 }
 interface Node {
   id: string;
