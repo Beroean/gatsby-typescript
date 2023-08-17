@@ -5,6 +5,9 @@ const theme = createTheme({
   palette: {
     mode: "dark",
   },
+  typography: {
+    fontFamily: "Times New Roman, Times, serif",
+  },
 });
 
 export default theme;

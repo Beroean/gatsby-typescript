@@ -14,8 +14,8 @@ import { Autocomplete, Stack, TextField, Typography } from "@mui/material";
 const CountryTimeSeries = () => {
   const [populationData, setPopulationData] = useState<[]>([]);
   const [country, setCountry] = useState<entry>({
-    key: "SYR",
-    label: "Syrian Arab Republic",
+    key: "USA",
+    label: "United States",
   });
   const [indicator, setIndicator] = useState<entry>({
     key: "LP",

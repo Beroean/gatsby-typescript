@@ -1,12 +1,7 @@
 import * as React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
-import {
-  container,
-  navLinks,
-  navLinkItem,
-  active,
-  link,
-} from "./layout.module.css";
+import { navLinks, navLinkItem, active, link } from "./layout.module.css";
+import { Container } from "@mui/material";
 
 interface LayoutProps {
   pageTitle: string;
@@ -25,7 +20,7 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
   `);
 
   return (
-    <div className={container}>
+    <div>
       <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>
@@ -46,8 +41,18 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
         </ul>
       </nav>
       <main>
-        <h2 style={{ marginBottom: "0px", marginTop: "0px" }}>{pageTitle}</h2>
-        {children}
+        <Container maxWidth={"md"}>
+          <h2
+            style={{
+              marginBottom: "0px",
+              marginTop: "0px",
+              textAlign: "center",
+            }}
+          >
+            {pageTitle}
+          </h2>
+          {children}
+        </Container>
       </main>
     </div>
   );
