@@ -13,7 +13,7 @@ interface Post {
 const BlogPost = ({ data, children }: PageProps<Post>) => {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
-      <p>{data.mdx.frontmatter.date}</p>
+      <p style={{ marginTop: "6px" }}>{data.mdx.frontmatter.date}</p>
       {children}
     </Layout>
   );
