@@ -23,7 +23,7 @@ const CountryTimeSeries = () => {
   });
   useEffect(() => {
     fetch(
-      `https://cors-proxy-mahmoud-6b27c38af7df.herokuapp.com/https://data.nasdaq.com/api/v3/datasets/ODA/${country.key}_${indicator.key}.json?collapse=annual&rows=10&order=desc&column_index=1`
+      `https://cors-proxy-mahmoud-6b27c38af7df.herokuapp.com/https://data.nasdaq.com/api/v3/datasets/ODA/${country.key}_${indicator.key}.json?collapse=annual&rows=25&order=desc&column_index=1`
     )
       .then((response) => response.json())
       .then((result) => {
@@ -69,7 +69,7 @@ const CountryTimeSeries = () => {
       </Stack>
 
       <Typography marginTop={5} textAlign="center" variant="body1">
-        {indicator.label} of {country.label} over the last available 10 years.
+        {indicator.label} of {country.label} over the last available 25 years.
       </Typography>
       {chartData.length && (
         <VictoryChart
@@ -78,6 +78,7 @@ const CountryTimeSeries = () => {
               labels={({ datum }) =>
                 `${datum.x.substring(0, 4)}, ${`${datum.y} M`}`
               }
+              labelComponent={<VictoryTooltip style={{ fontSize: 10 }} />}
             />
           }
           domainPadding={10}
@@ -86,14 +87,14 @@ const CountryTimeSeries = () => {
         >
           <VictoryAxis
             style={{
-              tickLabels: { fill: "white" },
+              tickLabels: { fill: "white", fontSize: 7 },
               grid: { stroke: "transparent" },
             }}
             tickFormat={(x: string) => (x ? x.substring(2, 4) : "")}
           />
           <VictoryAxis
             style={{
-              tickLabels: { fill: "white" },
+              tickLabels: { fill: "white", fontSize: 10 },
               grid: { stroke: "transparent" },
             }}
             dependentAxis
